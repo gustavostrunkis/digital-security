@@ -1,13 +1,23 @@
 * {
     font-family: 'Inter', sans-serif;
     text-decoration: none;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     color: #001920;
 }
 
 html {
     background: linear-gradient(270deg, #9DEDE5 58.38%, #E6FEFC 100%);
+    /* background: white; */
+}
+
+/* .header_1{
+    background: linear-gradient(270deg, #9DEDE5 58.38%, #E6FEFC 100%);
+} */
+
+:root{
+    --title-1-color: #006079;
+    --common-text-1-color: #001920;
 }
 
 div.div-flex.logo img {
@@ -19,7 +29,7 @@ div.div-flex.logo img {
 div.div-flex {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 div.div-flex.nav a {
@@ -45,10 +55,17 @@ div.div-title {
 }
 
 div.div-title h1 {
-    color: #006079;
+    color: var(--title-1-color);
     text-align: right;
     font-size: 6vw;
     font-weight: 400;
+}
+
+.title-3{
+    color: var(--title-1-color);
+    text-align: left;
+    font-size: 2.5vw;
+    font-weight: normal;
 }
 
 div.div-img {
@@ -94,6 +111,94 @@ div.div-flex.dev {
     width: 20%;
 }
 
+.div-flex-2{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-1{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    justify-content: center;
+    align-items: center;
+
+    background: #E4FFFC;
+}
+
+.o-que-e-seguranca-digital-1{
+    flex-direction: row;
+    width: 100%;
+    /* height: 200px; */
+    justify-content: space-around;
+    align-items: center;
+
+    /* background: #E4FFFC; */
+
+    padding-top: 8%;
+    padding-bottom: 8%;
+}
+
+.o-que-e-seguranca-digital-1-1{
+    height: auto;
+    width: 40%;
+    padding-left: 8%;
+    padding-right: 2%;
+    justify-content: center;
+    align-items: center;
+    /* background: red; */
+}
+
+.o-que-e-seguranca-digital-1-2{
+    width: 45%;
+    padding-left: 7%;
+    /* padding-right: 5%; */
+    justify-content: left;
+    align-items: end;
+    /* background: blue; */
+}
+
+#title-3-1{
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.common-text-1{
+    color: var(--common-text-1-color);
+    font-size: 1.2vw;
+    font-weight: normal;
+}
+
+.common-text-1-1{
+    padding-left: 10%;
+    margin-bottom: 40px;
+}
+
+.div-img-2{
+    /* transform: translateY(25%); */
+    display: flex;
+    flex-direction: column;
+
+    align-items: end;
+
+    width: 100%;
+    background: linear-gradient(270deg, rgba(0, 96, 121, 1) 66.21%, rgba(0, 171, 154, 0.23) 100%);
+}
+
+.img-2{
+    width: 90.5%;
+    max-width: 860px;
+    transform: translate(0, -16%);
+}
+
+.hr_1{
+    background: var(--title-1-color);
+    width: 100%;
+    height: 2px;
+    margin-bottom: 40px;
+}
 
 @media screen and (max-width: 1000px ) {
 
@@ -136,5 +241,4 @@ div.div-flex.dev {
         width: 100%;
         transform: translate(0);
     }
-
 }
