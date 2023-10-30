@@ -20,11 +20,74 @@ html {
     --title-2-color: #00AB9A;
     --common-text-1-color: #001920;
 
+    --gerador-de-senhas-1-background-color-1: #CDFFFA;
+
     --default-margin-bottom-1: 40px;
 }
 
 ::-webkit-scrollbar{
     width: 0px;
+    height: 0px;
+}
+
+div.div-title {
+    text-align: center;
+    transform: translateX(min(30%));
+}
+
+div.div-title h1 {
+    color: var(--title-1-color);
+    text-align: right;
+    font-size: 6vw;
+    font-weight: 400;
+}
+
+.title-2{
+    color: var(--title-2-color);
+    text-align: left;
+    font-size: 3.1vw;
+    font-weight: normal;
+}
+
+.title-3{
+    color: var(--title-1-color);
+    text-align: left;
+    font-size: 2.5vw;
+    font-weight: normal;
+    margin-bottom: var(--default-margin-bottom-1);
+    /* padding-left: 0.9%; */
+    padding-left: 18px;
+}
+
+.title-3-3{
+    padding-left: 0px;
+}
+
+.title-3-1{
+    width: 100%;
+}
+
+.common-text-1{
+    color: var(--common-text-1-color);
+    font-size: 1.2vw;
+    font-weight: normal;
+}
+
+.common-text-1-1{
+    padding-left: 10%;
+    margin-bottom: var(--default-margin-bottom-1);
+}
+
+.common-text-2{
+    color: var(--common-text-1-color);
+    width: auto;
+    max-width: 84%;
+    font-size: 1.6vw;
+    font-weight: normal;
+}
+
+.common-text-2-2{
+    margin-bottom: var(--default-margin-bottom-1);
 }
 
 div.div-flex.logo img {
@@ -54,32 +117,6 @@ div.div-flex.content {
     display: flex;
     align-items: center;
     justify-content: space-around;
-}
-
-div.div-title {
-    text-align: center;
-    transform: translateX(min(30%));
-}
-
-div.div-title h1 {
-    color: var(--title-1-color);
-    text-align: right;
-    font-size: 6vw;
-    font-weight: 400;
-}
-
-.title-2{
-    color: var(--title-2-color);
-    text-align: left;
-    font-size: 3.1vw;
-    font-weight: normal;
-}
-
-.title-3{
-    color: var(--title-1-color);
-    text-align: left;
-    font-size: 2.5vw;
-    font-weight: normal;
 }
 
 div.div-img {
@@ -173,24 +210,8 @@ div.div-flex.dev {
     /* background: blue; */
 }
 
-#title-3-1{
-    width: 100%;
-    margin-bottom: var(--default-margin-bottom-1);
-}
-
-.common-text-1{
-    color: var(--common-text-1-color);
-    font-size: 1.2vw;
-    font-weight: normal;
-}
-
-.common-text-1-1{
-    padding-left: 10%;
-    margin-bottom: var(--default-margin-bottom-1);
-}
-
 .div-img-2{
-    /* transform: translateY(25%); */
+    transform: translateY(8%);
     display: flex;
     flex-direction: column;
 
@@ -244,15 +265,55 @@ div.div-flex.dev {
 }
 
 .div-content-senhas-seguras-1{
-
+    justify-content: center;
+    align-items: center;
+    /* align-items: start; */
+    flex-direction: row;
+    width: 100%;
+    gap: 10%;
 }
 
 .senhas-seguras-1-1{
-
+    width: 45%;
+    /* height: auto; */
+    border-left: 2px solid var(--title-1-color);
 }
 
 .senhas-seguras-1-2{
+    width: 45%;
+    /* height: auto; */
+    /* min-height: 100%; */
+    border-left: 2px solid var(--title-1-color);
+}
 
+.gerador-de-senhas-1{
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    /* height: 200px; */
+
+    width: 100%;
+    padding-top: 8%;
+    padding-bottom: 8%;
+
+    background: var(--gerador-de-senhas-1-background-color-1);
+}
+
+.div-content-gerador-de-senhas-1{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 84%;
+    gap: 10%;
+}
+
+.gerador-de-senhas-1-1{
+    width: 45%;
+}
+
+.gerador-de-senhas-1-2{
+    width: 45%;
 }
 
 @media screen and (max-width: 1000px ) {
