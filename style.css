@@ -22,6 +22,8 @@ html {
 
     --gerador-de-senhas-1-background-color-1: #CDFFFA;
 
+    --gerador-de-senhas-1-submit-1-background-color-1: #E4FFFC;
+
     --default-margin-bottom-1: 40px;
 }
 
@@ -78,6 +80,11 @@ div.div-title h1 {
     margin-bottom: var(--default-margin-bottom-1);
 }
 
+.common-text-1-2{
+    padding-left: 4.5%;
+    margin-bottom: var(--default-margin-bottom-1);
+}
+
 .common-text-2{
     color: var(--common-text-1-color);
     width: auto;
@@ -88,6 +95,13 @@ div.div-title h1 {
 
 .common-text-2-2{
     margin-bottom: var(--default-margin-bottom-1);
+}
+
+div.div-flex-header.logo img {
+    max-width: 300px;
+    max-height: 80px;
+    transform: translateY(-6%);
+    padding: 10px;
 }
 
 div.div-flex.logo img {
@@ -102,7 +116,13 @@ div.div-flex {
     justify-content: space-evenly;
 }
 
-div.div-flex.nav a {
+div.div-flex-header {
+    display: flex;
+    align-items: center; 
+    justify-content: space-around;
+}
+
+div.div-flex-header a {
     padding: 10px;
     font-size: 17px;
 }
@@ -119,13 +139,6 @@ div.div-flex.content {
     justify-content: space-around;
 }
 
-div.div-img {
-    background: linear-gradient(270deg, rgba(39, 172, 159, 0.50) 66.21%, rgba(119, 217, 211, 0.00) 100%);
-    width: 80%;
-    max-width: 800px;
-    min-width: 550px;
-}
-
 div.div-img img{
     width: 80%;
     transform: translate(30%, -5%);
@@ -133,33 +146,60 @@ div.div-img img{
 
 footer {
     background-color: #001920;
-    height: 100%;
+    height: 155px;
 }
 
-footer a, h3, p{
-    color: black;
+.footer {
+    width: 90%;
+    margin: auto;
 }
 
 div.div-flex.dev {
-    padding-right: 10%;
-    border-right: 1px solid black;
-    height: 100%;
+    width: 45%;
+    border-right: 2px solid #006079;
+    height: 150px;
+
+    align-items:center;
+    justify-content: left;
+    margin-left: 5%;
 }
 
 .links-footer {
-    width: 10%;
-    padding-right: 10%;
-    border-right: 1px solid black;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    border-right: 2px solid #006079;
+    height: 150px;
+
+    /* align-items: center; */
+    justify-content: center;
+}
+.links-footer a{
+    color: #64B8E7;
+    width: 70%;
+    padding: 2px 0px 2px 0px;
 }
 
 .dev-footer {
-    width: 40%;
     margin: 0px 10px 0px 10px;
 }
 
+.dev-footer p{
+    color: #00AB9A;
+}
+
+.dev-footer h3{
+    color: #E4FFFC;
+}
+
+.img-footer img {
+    height: 150px;
+
+}
+
 .img-footer {
-    width: 20%;
+    width: 30%;
+    text-align: center;
 }
 
 .div-flex-2{
@@ -306,22 +346,178 @@ div.div-flex.dev {
     align-items: center;
     width: 84%;
     gap: 10%;
+    margin-bottom: calc(2 * var(--default-margin-bottom-1));
 }
 
 .gerador-de-senhas-1-1{
-    width: 45%;
+    width: 35%;
 }
 
 .gerador-de-senhas-1-2{
-    width: 45%;
+    width: 55%;
 }
 
-@media screen and (max-width: 1000px ) {
+.gerador-de-senhas-1-3{
+    flex-direction: column;
+    width: 84%;
+    justify-content: left;
+    align-items: start;
+    border-left: 2px solid var(--title-1-color);;
+}
 
+.input-checkbox-1{
+    --active_1: 1;
+
+    width: 1.3vw;
+    height: 1.3vw;
+
+    max-width: 25px;
+    max-height: 25px;
+
+    border: 0.25vw solid var(--title-2-color);
+    border-radius: 50%;
+
+    background: rgb(0, 171, 154, var(--active_1));
+
+    transition: all;
+    transition-duration: 0.1s;
+}
+
+.input-checkbox-1:hover{
+    cursor: pointer;
+    border: 0.25vw solid var(--title-1-color);
+    background:rgb(0, 96, 121, var(--active_1));
+}
+
+/* .input-checkbox-1::after{
+    position: relative;
+
+    --active_1: 1;
+
+    top: 0px;
+    left: 0px;
+
+    width: calc(1.3vw / 2);
+    height: calc(1.3vw / 2);
+
+    max-width: calc(25px / 2);
+    max-height: calc(25px / 2);
+
+    background: rgb(0, 171, 154, var(--active_1));
+} */
+
+.div-checkbox-1{
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 0.9vw;
+    margin-bottom: 20px;
+}
+
+.form_1{
+    padding-left: 1.9vw;
+}
+
+.class-label-1{
+    color: var(--common-text-1-color);
+    font-size: 2.5vw;
+    font-weight: normal;
+}
+
+.output_password_1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 5.42vw;
+    outline: none;
+    border: none;
+    background: var(--title-2-color);
+    text-align: center;
+    font-size: 2.5vw;
+    margin-bottom: var(--default-margin-bottom-1);
+}
+
+.div-senha-1{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.cIcon_1{
+    position: absolute;
+    z-index: 1;
+}
+
+.submit_1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 16.5vw;
+    height: 5.42vw;
+    font-size: 2.5vw;
+    font-weight: normal;
+    color: var(--title-2-color);
+    outline: none;
+    border: 0.25vw solid var(--title-2-color);
+    background: var(--gerador-de-senhas-1-submit-1-background-color-1);
+}
+
+.submit_1:hover{
+    cursor: pointer;
+}
+
+#header-cell {
+    display: none;
+    position: relative;
+    left: 10%;
+    top: 30px;
+    background-color: #00ab9a21;
+    width: 150px;
+    padding: 3px;
+    animation: buttonUp 1s ease forwards;
+}
+
+
+#hidden-button {
+    display: none ;
+    background-color: transparent;
+    border: none;
+}
+
+#hidden-button:hover {
+    cursor: pointer;
+}
+
+@keyframes buttonUp {
+    0% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(0px);
+      }
+}
+
+@media screen and (max-width:960px) {
+
+
+    #hidden-button {
+        display: block;
+    }
+    
+    #nav{
+        display: none;
+    }
+
+
+}
+
+@media screen and (max-width: 1400px ) {
     
     div.div-flex {
         display: flex;
-        flex-direction: column;
     }
 
     header {
@@ -357,4 +553,63 @@ div.div-flex.dev {
         width: 100%;
         transform: translate(0);
     }
+
+    /* footer in cell */
+
+    footer {
+        height: 140px;
+    }
+    
+    .footer {
+        width: 100%;
+        margin: auto;
+    }
+    
+    div.div-flex.dev {
+        margin: 20px 0px 20px 0px;
+        width: 100%;
+        border: none;
+        height: auto;
+        align-items:center;
+        justify-content: center;
+    }
+
+    div.div-flex.dev div:nth-child(2) {
+        display: none;
+    }
+    
+    .links-footer {
+        margin: 20px 0px 20px 0px;        
+        width: 100%;
+        height: auto;
+        border: none;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .links-footer a {
+        font-size: 15px;
+    }
+
+    .dev-footer p{
+        font-size: 15px;
+    }
+    
+    .dev-footer h3{
+        font-size: 16px;
+    }
+    
+    .dev-footer {
+        height: auto;
+        text-align: center;
+    }
+    
+    .img-footer img {
+        display: none;
+    }
+    
+    .img-footer {
+        display: none;
+    }
+
 }
